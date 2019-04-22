@@ -2,15 +2,46 @@ import React, { Component } from "react"
 import Title from "../title"
 import Img from "gatsby-image"
 
+const storeCatergory = items => {
+  let tempItems = items.map(items => {
+    return items.node.category
+  })
+  //prevent repeat catergory
+  let tempCategories = new Set(tempItems)
+  let categories = Array.from(tempCategories)
+  categories = ["all", ...categories]
+  return categories
+}
 export default class Menu extends Component {
   constructor(props) {
     super(props)
     this.state = {
       items: props.items.edges,
-      tempItems: props.items.edges,
+      tempCoffeeItems: props.items.edges,
+      catergories: storeCatergory(props.items.edges),
+    }
+  }
+  handleChange = item => {
+    //   // console.log(this.state.items, item)
+    let tempItems = [...this.state.items]
+    if (item === "all") {
+      this.setState(() => {
+        return {
+          tempCoffeeItems: tempItems,
+        }
+      })
+    } else {
+      let items = tempItems.filter(({ node }) => node.category === item)
+      this.setState(() => {
+        return {
+          tempCoffeeItems: items,
+        }
+      })
     }
   }
   render() {
+    // console.log(this.state.catergories)
+
     if (this.state.items.length > 0) {
       return (
         <section
@@ -20,18 +51,34 @@ export default class Menu extends Component {
           <div className="container">
             <Title title="best product " />
             {/* catergory */}
+            <div className="row m-0 mb-5">
+              <div className="col-12 mx-auto text-center">
+                {this.state.catergories.map((item, index) => {
+                  return (
+                    <button
+                      className="btn btn-warning btn-outline-danger m-3 px-5 text-uppercase"
+                      key={index}
+                      onClick={() => this.handleChange(item)}
+                    >
+                      {item}
+                    </button>
+                  )
+                })}
+              </div>
+            </div>
+
             {/* items */}
             <div className="row m-0">
-              {this.state.tempItems.map(({ node }) => {
+              {this.state.tempCoffeeItems.map(({ node }) => {
                 // console.log(node.image.fixed)
                 return (
                   <div
                     key={node.id}
-                    className="col-12 col-md-8 d-flex mx-auto rounded py-3"
+                    className="col-12 col-md-8 d-flex mx-auto  py-3"
                     style={{ fontSize: "25px" }}
                   >
                     <div>
-                      <Img fixed={node.image.fixed} />
+                      <Img fixed={node.image.fixed} className="rounded" />
                     </div>
                     <div className="flex-grow-1 px-3">
                       <div className="d-flex justify-content-between mb-1 text-capitalize">
