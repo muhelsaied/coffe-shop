@@ -1,30 +1,102 @@
 /*  google fonts */
-@import url('https://fonts.googleapis.com/css?family=Amaranth|Bad+Script|Sigmar+One');
-:root{
-  --mainColor:#1a1a1b;
-  --mainGrey:#ece8dc;
-  --mainBrown:#31080c;
-  --mainYellow:#775c0b;
-  --mainWhite:#e9ecef;
-  --mainDark:#2e2e35;
+@import url("https://fonts.googleapis.com/css?family=Amaranth|Bad+Script|Sigmar+One");
 
+/* global variables */
+:root {
+  --mainColor: #1a1a1b;
+  --mainGrey: #ece8dc;
+  --mainBrown: #31080c;
+  --mainYellow: #775c0b;
+  --mainWhite: #e9ecef;
+  --mainDark: #2e2e35;
+
+  --mainTransition: all 0.3s ease-in-out;
 }
 
-body{
+/* default setup   */
+body {
   background: var(--mainWhite);
   color: var(--mainBrown);
-  font-family: 'Amaranth',sans-serif !important;
+  font-family: "Amaranth", sans-serif !important;
 }
 
-h1,h2,h3,h4,h5,h6{
-  font-family: 'Sigmar+One',fantasy !important;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Sigmar+One", fantasy !important;
   letter-spacing: 0.25rem !important;
 }
-.text-yellow{
+.text-yellow {
   color: var(--mainYellow);
 }
+.homepage-background {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background: linear-gradient(
+    rgba(235, 240, 236, 0.9),
+    rgba(235, 240, 236, 0.8)
+  ); */
+}
+.default-background {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+    rgba(235, 240, 236, 0.9),
+    rgba(235, 240, 236, 0.8)
+  );
+}
 
-.cart-icon{
-  cursor: pointer;;
-  font-size: 1.5rem;
+/* pop cart  */
+
+.cart-icon {
+  cursor: pointer;
+  font-size: 2.5rem;
+  color: var(--mainYellow);
+  position: fixed;
+  z-index: 10;
+  right: 5%;
+  top: 20%;
+  background: var(--mainDark);
+  padding: 10px;
+  border-radius: 10px;
+}
+.cart-icon:hover {
+  background: var(--mainWhite);
+  color: var(--mainYellow);
+  transform: scale(1.4);
+  transition: var(--mainTransition);
+}
+/* about button */
+.about-btn {
+  color: var(--mainDark);
+  background: var(--mainWhite);
+  border-color: var(--mainDark);
+  padding: 10px 50px !important;
+  font-size: "Bad+Script", fantasy !important;
+}
+.about-btn:hover {
+  background: var(--mainDark);
+  color: var(--mainWhite);
+  border-color: var(--mainDark);
+}
+
+/* medai query */
+
+@media (max-width: 800px) {
+  .cart-icon {
+    top: 25%;
+  }
 }

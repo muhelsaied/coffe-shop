@@ -9,10 +9,16 @@ import "./layout.css"
 // import navbar
 
 import NavBar from "./skeleton/navbar"
+import Footer from "./skeleton/footer"
+// import pop cart
+import PopCart from "./skeleton/popCart"
+
 const Layout = ({ children }) => (
   <>
     <NavBar />
+    <PopCart />
     {children}
+    <Footer />
   </>
 )
 

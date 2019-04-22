@@ -3,7 +3,6 @@ import { Link } from "gatsby"
 
 import logo from "../../images/logo.png"
 
-import { FaShoppingCart } from "react-icons/fa"
 export default class NavBar extends Component {
   state = {
     navBarOpen: false,
@@ -34,8 +33,10 @@ export default class NavBar extends Component {
   }
   render() {
     return (
-      <nav className="navbar navbar-expand-md nav-bar navbar-dark "
-        style={{background:"#1b2127"}}>
+      <nav
+        className="navbar navbar-expand-md nav-bar navbar-dark "
+        style={{ background: "#1b2127" }}
+      >
         <Link to="/" className="">
           {/* https://www.iconfinder.com/icons/71188/coffee_cup_mug_icon */}
           <img
@@ -56,16 +57,17 @@ export default class NavBar extends Component {
           <ul className="navbar-nav mx-auto">
             {this.state.links.map(link => {
               return (
-                <li className="nav-item" key={link.id}>
+                <li
+                  className="nav-item px-3 mx-3"
+                  style={{ fontSize: "1.5rem" }}
+                  key={link.id}
+                >
                   <Link className="nav-link text-uppercase" to={link.path}>
                     {link.text}
                   </Link>
                 </li>
               )
             })}
-                <li className="text-uppercase text-danger nav-item mt-2 mb-2">
-                    <FaShoppingCart className='cart-icon'/>
-                </li>
           </ul>
         </div>
       </nav>
