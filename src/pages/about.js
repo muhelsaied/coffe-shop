@@ -1,20 +1,25 @@
 import React from "react"
+import { Link, graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import BackGround from "../components/skeleton/backGround"
 import Info from "../components/skeleton/homePage/info"
 
-const NotFoundPage = () => (
+const AboutPage = ({ data }) => (
   <Layout>
-    <SEO title="404: Not found" />
-    <h1>NOT FOUND</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+    <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+    <BackGround
+      img={data.img.childImageSharp.fluid}
+      title="Our success stories"
+      styleClass="about-background"
+    />
+    <Info />
   </Layout>
 )
 export const query = graphql`
   {
-    img: file(relativePath: { eq: "bg.jpg" }) {
+    img: file(relativePath: { eq: "about.jpg" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid_tracedSVG
@@ -24,4 +29,4 @@ export const query = graphql`
   }
 `
 
-export default NotFoundPage
+export default AboutPage

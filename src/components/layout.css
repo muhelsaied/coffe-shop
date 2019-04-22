@@ -45,7 +45,8 @@ h6 {
     rgba(235, 240, 236, 0.8)
   ); */
 }
-.default-background {
+.default-background,
+.about-background {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -58,7 +59,10 @@ h6 {
     rgba(235, 240, 236, 0.8)
   );
 }
-
+/* about page */
+.about-background {
+  min-height: 60vh;
+}
 /* pop cart  */
 
 .cart-icon {

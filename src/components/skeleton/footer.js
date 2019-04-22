@@ -31,6 +31,9 @@ const FooterWrapper = styled.div`
   color: var(--mainYellow) !important;
   font-size: 1.5rem;
   line-height: 1.5;
+  h4 {
+    text-align: center;
+  }
   .footer {
     display: flex;
     flex-direction: row;
