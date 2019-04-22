@@ -9,6 +9,7 @@
   --secBrown: #cec19b;
   --triBrown: #af9034;
   --mainYellow: #775c0b;
+  --mainCoffee: #473603;
   --mainWhite: #e9ecef;
   --mainDark: #2e2e35;
 
@@ -115,6 +116,7 @@ h6 {
   transition: var(--mainTransition);
   z-index: 120;
 }
+
 /* product sell  */
 .product-fade {
   border-radius: 20px !important;
@@ -131,5 +133,14 @@ h6 {
   }
   .product-btn {
     max-width: 200px !important;
+  }
+}
+
+@media (max-width: 350px) {
+  .section-menu {
+    flex-direction: column;
+    text-align: center;
+    align-content: center;
+    align-items: center;
   }
 }

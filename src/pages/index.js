@@ -7,7 +7,7 @@ import BackGround from "../components/skeleton/backGround"
 import Info from "../components/skeleton/homePage/info"
 import Menu from "../components/skeleton/homePage/menu"
 import Products from "../components/skeleton/homePage/products"
-
+import Contact from "../components/skeleton/homePage/contact"
 const IndexPage = ({ data }) => (
   <Layout>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
@@ -19,6 +19,7 @@ const IndexPage = ({ data }) => (
     <Info />
     <Menu items={data.menu} />
     <Products />
+    <Contact />
   </Layout>
 )
 export const query = graphql`

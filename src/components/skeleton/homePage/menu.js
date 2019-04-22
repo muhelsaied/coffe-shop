@@ -82,7 +82,7 @@ export default class Menu extends Component {
                       <Img fixed={node.image.fixed} className="rounded" />
                     </div>
                     <div className="flex-grow-1 px-3">
-                      <div className="d-flex justify-content-between mb-1 text-capitalize">
+                      <div className="d-flex justify-content-between mb-1 text-capitalize section-menu">
                         <h6 className="mb-0 text-danger">{node.title}</h6>
                         <h6 className="mb-0 text-danger  rounded  text-center">
                           ${node.price}
