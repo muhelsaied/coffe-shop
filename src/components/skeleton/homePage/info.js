@@ -12,7 +12,7 @@ export default function Info() {
           <div className="col-10 col-sm-8 p-3 text-center mx-auto">
             <p
               className="lead text-muted mb-5 "
-              style={{ textAlign: "justify-content !important" }}
+              style={{ textAlign: "justify" }}
             >
               Contrary to popular belief, Lorem Ipsum is not simply random text.
               It has roots in a piece of classical Latin literature from 45 BC,
