@@ -113,7 +113,14 @@ h6 {
   box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6);
   transform: scale(1.02);
   transition: var(--mainTransition);
-  z-index: 12;
+  z-index: 120;
+}
+/* product sell  */
+.product-fade {
+  border-radius: 20px !important;
+}
+.fix-flex {
+  flex-direction: column !important;
 }
 
 /* media query */
