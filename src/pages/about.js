@@ -8,7 +8,7 @@ import Info from "../components/skeleton/homePage/info"
 
 const AboutPage = ({ data }) => (
   <Layout>
-    <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+    <SEO title="About" keywords={[`gatsby`, `application`, `react`]} />
     <BackGround
       img={data.img.childImageSharp.fluid}
       title="Our success stories"

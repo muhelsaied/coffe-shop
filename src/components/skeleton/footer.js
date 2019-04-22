@@ -1,7 +1,8 @@
 import React from "react"
 import styled from "styled-components"
 import { socialIcons } from "../../links/socialicons"
-import { icons } from "react-icons/lib/cjs"
+
+// import { icons } from "react-icons/lib/cjs"
 export default function Footer() {
   return (
     <FooterWrapper className="py-3">
@@ -9,14 +10,16 @@ export default function Footer() {
         <div className="row">
           <div className="col-lg-6 col-sm-10 mx-auto text-capitalize">
             <h4>
-              {" "}
               all rights reversed &copy; {new Date().getFullYear().toString()}
             </h4>
+            <h6>D muhamed elsaied</h6>
           </div>
           <div className="col-lg-6 col-sm-10 mx-auto footer">
             {socialIcons.map(item => (
-              <div className="footer-icon" key={item.id}>
-                {item.icon}
+              <div className="footer-div" key={item.id}>
+                <a className="footer-icon" href={item.link} target="_blank">
+                  {item.icon}
+                </a>
               </div>
             ))}
           </div>
@@ -31,7 +34,8 @@ const FooterWrapper = styled.div`
   color: var(--mainYellow) !important;
   font-size: 1.5rem;
   line-height: 1.5;
-  h4 {
+  h4,
+  h6 {
     text-align: center;
   }
   .footer {
@@ -39,14 +43,17 @@ const FooterWrapper = styled.div`
     flex-direction: row;
     justify-content: space-around;
   }
+  .footer-div:hover {
+    transform: scale(1.5);
+  }
   .footer-icon {
     margin: 0.65rem;
     padding: 0.5rem;
+    color: var(--mainYellow);
+    transition: (--mainTranisition);
   }
   .footer-icon:hover {
     color: var(--mainWhite);
-    transform: scale(1.3);
-    transition: (--mainTranisition);
   }
 
   @media (max-width: 310px) {
