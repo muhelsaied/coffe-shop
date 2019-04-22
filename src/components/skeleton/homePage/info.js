@@ -10,7 +10,10 @@ export default function Info() {
         <Title title=" our stories" />
         <div className="row">
           <div className="col-10 col-sm-8 p-3 text-center mx-auto">
-            <p className="lead text-muted mb-5 ">
+            <p
+              className="lead text-muted mb-5 "
+              style={{ textAlign: "justify-content !important" }}
+            >
               Contrary to popular belief, Lorem Ipsum is not simply random text.
               It has roots in a piece of classical Latin literature from 45 BC,
               making it over 2000 years old. Richard McClintocka Latin professor

@@ -8,10 +8,10 @@ export default function Footer() {
       <div className="container-fluid">
         <div className="row">
           <div className="col-lg-6 col-sm-10 mx-auto text-capitalize">
-            <p>
+            <h4>
               {" "}
               all rights reversed &copy; {new Date().getFullYear().toString()}
-            </p>
+            </h4>
           </div>
           <div className="col-lg-6 col-sm-10 mx-auto footer">
             {socialIcons.map(item => (
@@ -30,7 +30,7 @@ const FooterWrapper = styled.div`
   background: var(--mainColor);
   color: var(--mainYellow) !important;
   font-size: 1.5rem;
-  align-content: color-interpolation-filters;
+  line-height: 1.5;
   .footer {
     display: flex;
     flex-direction: row;
