@@ -33,7 +33,21 @@ h6 {
 .text-yellow {
   color: var(--mainYellow);
 }
-.homepage-background {
+/* default background */
+
+.default-background {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.homepage-background,
+.about-background,
+.not-found-bg {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -46,24 +60,16 @@ h6 {
     rgba(235, 240, 236, 0.8)
   ); */
 }
-.default-background,
-.about-background {
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  min-height: 70vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(
-    rgba(235, 240, 236, 0.9),
-    rgba(235, 240, 236, 0.8)
-  );
-}
 /* about page */
 .about-background {
   min-height: 60vh;
 }
+/* not-found-bg */
+.not-found-bg {
+  flex-direction: column;
+  min-height: 60vh;
+}
+
 /* pop cart  */
 
 .cart-icon {
@@ -98,7 +104,7 @@ h6 {
   border-color: var(--mainDark);
 }
 
-/* medai query */
+/* media query */
 
 @media (max-width: 800px) {
   .cart-icon {
