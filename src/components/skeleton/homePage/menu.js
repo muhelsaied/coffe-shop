@@ -56,7 +56,8 @@ export default class Menu extends Component {
                 {this.state.catergories.map((item, index) => {
                   return (
                     <button
-                      className="btn btn-warning btn-outline-danger m-3 px-5 text-uppercase"
+                      className="btn btn-warning btn-outline-danger m-3 text-uppercase product-btn"
+                      style={{ maxWidth: "150px", width: "100%" }}
                       key={index}
                       onClick={() => this.handleChange(item)}
                     >
@@ -74,7 +75,7 @@ export default class Menu extends Component {
                 return (
                   <div
                     key={node.id}
-                    className="col-12 col-md-8 d-flex mx-auto  py-3"
+                    className="col-12 col-md-6 d-flex mx-auto  py-3 text-weight-bold product-section"
                     style={{ fontSize: "25px" }}
                   >
                     <div>
@@ -82,7 +83,7 @@ export default class Menu extends Component {
                     </div>
                     <div className="flex-grow-1 px-3">
                       <div className="d-flex justify-content-between mb-1 text-capitalize">
-                        <h6 className="mb-0 text-muted">{node.title}</h6>
+                        <h6 className="mb-0 text-danger">{node.title}</h6>
                         <h6 className="mb-0 text-danger  rounded  text-center">
                           ${node.price}
                         </h6>

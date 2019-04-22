@@ -7,6 +7,7 @@
   --mainGrey: #ece8dc;
   --mainBrown: #31080c;
   --secBrown: #cec19b;
+  --triBrown: #af9034;
   --mainYellow: #775c0b;
   --mainWhite: #e9ecef;
   --mainDark: #2e2e35;
@@ -104,10 +105,24 @@ h6 {
   border-color: var(--mainDark);
 }
 
+/* product section  */
+.product-section:hover {
+  /* filter: brightness(90%); */
+  background: var(--triBrown);
+  cursor: pointer;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6);
+  transform: scale(1.02);
+  transition: var(--mainTransition);
+  z-index: 12;
+}
+
 /* media query */
 
 @media (max-width: 800px) {
   .cart-icon {
     top: 25%;
+  }
+  .product-btn {
+    max-width: 200px !important;
   }
 }
