@@ -8,13 +8,14 @@ export default function Contact() {
       <div className="conatiner m-0">
         <Title title="your suggestion" />
         <div className="form-group col-10 col-md-8 col-lg-6 mx-auto">
-          <form
+          {/* <form
             name="contact"
             method="POST"
             netlify-honeypot="bot-field"
             data-netlify="true"
             data-netlify-recaptcha="true"
-          >
+          > */}
+          <form action={process.env.MAIL} method="POST">
             {/* name */}
             <div className="form-group">
               <label htmlFor="name">Name :</label>
