@@ -8,12 +8,18 @@ export default function Contact() {
       <div className="conatiner m-0">
         <Title title="your suggestion" />
         <div className="form-group col-10 col-md-8 col-lg-6 mx-auto">
-          <form>
+          <form
+            action="POST"
+            name="contact"
+            method="POST"
+            netlify-honeypot="bot-field"
+            data-netlify="true"
+          >
             {/* name */}
             <div className="form-group">
               <label htmlFor="name">Name :</label>
               <input
-                type="name"
+                type="text"
                 className="form-control"
                 id="name"
                 placeholder="Muh Elsaied"
@@ -36,7 +42,7 @@ export default function Contact() {
             <div className="form-group">
               <label htmlFor="name">Message :</label>
               <textarea
-                type="message"
+                type="text"
                 className="form-control"
                 id="message"
                 rows="5"
@@ -47,11 +53,12 @@ export default function Contact() {
             {/* submit  */}
             <div className="form-group">
               <input
-                type="button"
+                type="Submit"
                 className="btn btn-outline-light mx-auto  d-block submit-btn"
                 value="Submit"
               />
             </div>
+            <div className="form-group" data-netlify-recaptcha />
             <small className="form-text text-muted text-center my-2">
               We'll never share your email with anyone else.
             </small>
