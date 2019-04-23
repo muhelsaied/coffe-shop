@@ -9,11 +9,11 @@ export default function Contact() {
         <Title title="your suggestion" />
         <div className="form-group col-10 col-md-8 col-lg-6 mx-auto">
           <form
-            action="POST"
             name="contact"
             method="POST"
             netlify-honeypot="bot-field"
             data-netlify="true"
+            data-netlify-recaptcha="true"
           >
             {/* name */}
             <div className="form-group">
@@ -58,7 +58,7 @@ export default function Contact() {
                 value="Submit"
               />
             </div>
-            <div className="form-group" data-netlify-recaptcha />
+            {/* <div className="form-group" data-netlify-recaptcha="true" /> */}
             <small className="form-text text-muted text-center my-2">
               We'll never share your email with anyone else.
             </small>
