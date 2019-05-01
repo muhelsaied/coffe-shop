@@ -16,7 +16,7 @@ const IndexPage = ({ data }) => (
       title="Hot coffe Make's your day"
       styleClass="homepage-background"
     />
-    <Info path='/about'/ name='about page'>
+    <Info path='/about' name='about page'/>
     <Menu items={data.menu} />
     <Products />
     <Contact />
