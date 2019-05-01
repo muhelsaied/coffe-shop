@@ -14,7 +14,7 @@ const AboutPage = ({ data }) => (
       title="Our success stories"
       styleClass="about-background"
     />
-    <Info />
+    <Info path='home page'/>
   </Layout>
 )
 export const query = graphql`
