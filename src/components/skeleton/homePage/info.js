@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 
 import Title from "../title"
 
-export default function Info({path}) {
+export default function Info({path,name}) {
   return (
     <section className="py-5">
       <div className="container">
@@ -33,7 +33,7 @@ export default function Info({path}) {
               H. Rackham.
             </p>
             <Link to={path} className="btn about-btn text-uppercase p-2">
-              about page
+              {name}
             </Link>
           </div>
         </div>
