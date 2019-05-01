@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 
 import Title from "../title"
 
-export default function Info() {
+export default function Info({path}) {
   return (
     <section className="py-5">
       <div className="container">
@@ -32,7 +32,7 @@ export default function Info() {
               form, accompanied by English versions from the 1914 translation by
               H. Rackham.
             </p>
-            <Link to="/about" className="btn about-btn text-uppercase p-2">
+            <Link to={path} className="btn about-btn text-uppercase p-2">
               about page
             </Link>
           </div>
